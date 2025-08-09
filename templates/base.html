@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate, max-age=0">
+        <meta http-equiv="Pragma" content="no-cache">
+        <meta http-equiv="Expires" content="-1">
+        <meta name="description" content="{% block description %}Panos multiuso Klint - Tecnologia no tecido. Limpeza eficiente e duradoura para sua casa.{% endblock %}">
+    <meta name="keywords" content="{% block keywords %}panos multiuso, klint, limpeza, tecnologia no tecido{% endblock %}">
+    <meta name="author" content="Klint">
+    
+    <title>{% block title %}Klint - Panos Multiuso | Tecnologia no Tecido{% endblock %}</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/klint.png') }}">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+            <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}?v=3.1">
+    
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/klint.png') }}" alt="Klint Logo">
+                <div class="logo-text">
+                    <h1>KLINT</h1>
+                    <p>Tecnologia no Tecido</p>
+                </div>
+            </div>
+            <div class="nav-links">
+                <a href="{{ url_for('index') }}">Home</a>
+                <a href="{{ url_for('produto') }}">Produto</a>
+                <a href="{{ url_for('sobre') }}">Sobre</a>
+                <a href="{{ url_for('contato') }}">Contato</a>
+            </div>
+            <a href="https://wa.me/47999809687" class="cta-button">
+                <i class="fab fa-whatsapp"></i> Comprar Agora
+            </a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>KLINT</h3>
+                <p>Tecnologia no Tecido</p>
+                <p>Transformando a limpeza com inovação e qualidade.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p><i class="fab fa-whatsapp"></i> Central de Vendas: (47) 99980-9687</p>
+                <p><i class="fab fa-instagram"></i> @klint_panos</p>
+            </div>
+            <div class="footer-section">
+                <h3>Redes Sociais</h3>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/klint_panos" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/47999809687" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Klint - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/47999809687?text=Olá! Gostaria de saber mais sobre os panos multiuso Klint" class="whatsapp-button" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- JavaScript -->
+            <script src="{{ url_for('static', filename='js/main.js') }}?v=3.1"></script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Final - Animações Klint</title>
+    <style>
+        :root {
+            --accent-color: #25d366;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .test-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .price {
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease-out 0.5s both, pricePulse 3s ease-in-out 2s infinite;
+            position: relative;
+            z-index: 10;
+        }
+
+        .price-original {
+            font-size: 2.2rem !important;
+            color: #999 !important;
+            text-decoration: line-through !important;
+            margin-bottom: 0.5rem !important;
+            opacity: 0 !important;
+            transform: translateX(-50px) !important;
+            animation: slideInLeft 1s ease-out 0.7s forwards !important;
+            display: block !important;
+            font-weight: 600 !important;
+        }
+
+        .price-current {
+            font-size: 6rem !important;
+            font-weight: 900 !important;
+            color: var(--accent-color) !important;
+            margin-bottom: 0.5rem !important;
+            position: relative !important;
+            animation: pricePulse 2s ease-in-out 1s infinite !important;
+            display: block !important;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1) !important;
+        }
+
+        .price-current::after {
+            content: '' !important;
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            bottom: 0 !important;
+            background: linear-gradient(45deg, transparent, rgba(74, 144, 226, 0.2), transparent) !important;
+            animation: priceShine 3s ease-in-out 1.5s infinite !important;
+            pointer-events: none !important;
+        }
+
+        .price-current .currency {
+            font-size: 3rem !important;
+            vertical-align: top !important;
+            animation: bounce 1s ease-out 1.2s forwards !important;
+            display: inline-block !important;
+        }
+
+        .price-discount {
+            font-size: 1.8rem !important;
+            color: #e74c3c !important;
+            font-weight: 700 !important;
+            background: rgba(231, 76, 60, 0.15) !important;
+            padding: 0.5rem 1rem !important;
+            border-radius: 20px !important;
+            display: inline-block !important;
+            transform: scale(0) !important;
+            animation: discountPop 0.8s ease-out 1.4s forwards !important;
+            border: 2px solid #e74c3c !important;
+            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3) !important;
+        }
+        
+        @keyframes slideInLeft {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes pricePulse {
+            0%, 100% {
+                transform: scale(1);
+                color: var(--accent-color);
+            }
+            25% {
+                transform: scale(1.08);
+                color: #1e8449;
+            }
+            50% {
+                transform: scale(1.05);
+                color: #27ae60;
+            }
+            75% {
+                transform: scale(1.08);
+                color: #2ecc71;
+            }
+        }
+        
+        @keyframes priceShine {
+            0% {
+                transform: translateX(-100%);
+            }
+            50% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(100%);
+            }
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 53%, 80%, 100% {
+                transform: translate3d(0,0,0);
+            }
+            40%, 43% {
+                transform: translate3d(0, -30px, 0);
+            }
+            70% {
+                transform: translate3d(0, -15px, 0);
+            }
+            90% {
+                transform: translate3d(0, -4px, 0);
+            }
+        }
+        
+        @keyframes discountPop {
+            0% {
+                transform: scale(0) rotate(-10deg);
+                opacity: 0;
+            }
+            25% {
+                transform: scale(1.2) rotate(5deg);
+                opacity: 0.8;
+            }
+            50% {
+                transform: scale(1.1) rotate(-3deg);
+                opacity: 1;
+            }
+            75% {
+                transform: scale(1.05) rotate(2deg);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1) rotate(0deg);
+                opacity: 1;
+            }
+        }
+        
+        .status {
+            margin-top: 2rem;
+            padding: 1rem;
+            background: #e8f5e8;
+            border-radius: 8px;
+            color: #2d5a2d;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>Teste Final - Animações Klint</h1>
+        <p>Se você consegue ver as animações abaixo, elas estão funcionando corretamente:</p>
+        
+        <div class="price">
+            <div class="price-original">de R$ 198,00</div>
+            <div class="price-current">
+                <span class="currency">R$</span>109,90
+            </div>
+            <div class="price-discount">44% de desconto no PIX</div>
+        </div>
+        
+        <div class="status">
+            <strong>Status:</strong> Animações aplicadas com sucesso!<br>
+            - Preço original: slideInLeft<br>
+            - Preço atual: pricePulse (pulsando e mudando cor)<br>
+            - Desconto: discountPop (aparecendo com rotação)<br>
+            - Brilho: priceShine (efeito de brilho no preço)
+        </div>
+    </div>
+</body>
+</html>

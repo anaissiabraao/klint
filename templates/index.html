@@ -1,0 +1,132 @@
+{% extends "base.html" %}
+
+{% block title %}Klint - Panos Multiuso | Tecnologia no Tecido{% endblock %}
+{% block description %}Descubra a revolução na limpeza com nossos panos multiuso Klint. Eficiência, durabilidade e praticidade em um só produto. Compre agora por R$ 109,90!{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section id="home" class="hero">
+    <div class="hero-content">
+        <h2>Panos Multiuso <span class="highlight">Klint</span></h2>
+        <p>Descubra a revolução na limpeza com nossos panos multiuso de tecnologia avançada. Eficiência, durabilidade e praticidade em um só produto.</p>
+        <div class="price">
+            <div class="price-original">de R$ 198,00</div>
+            <div class="price-current">
+                <span class="currency">R$</span>109,90
+            </div>
+            <div class="price-discount">44% de desconto no PIX</div>
+        </div>
+        <a href="https://wa.me/47999809687?text=Olá! Gostaria de comprar os panos multiuso Klint por R$ 109,90" class="cta-button">
+            <i class="fab fa-whatsapp"></i> Comprar no WhatsApp
+        </a>
+    </div>
+    <div class="hero-image">
+        <img src="{{ url_for('static', filename='images/panos-klint.png') }}" alt="Panos Multiuso Klint">
+    </div>
+</section>
+
+<!-- Features Section -->
+<section id="beneficios" class="features">
+    <div class="container">
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-magic"></i>
+                </div>
+                <h3>Limpeza Eficiente</h3>
+                <p>Remove sujeiras e manchas com facilidade, mesmo sem produtos químicos agressivos.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-recycle"></i>
+                </div>
+                <h3>Reutilizável</h3>
+                <p>Lave e reutilize centenas de vezes mantendo a eficiência e maciez.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Durabilidade</h3>
+                <p>Fabricado com tecnologia avançada para resistir ao uso intenso e múltiplas lavagens.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-leaf"></i>
+                </div>
+                <h3>Ecológico</h3>
+                <p>Reduza o uso de produtos químicos e ajude o meio ambiente com uma limpeza mais sustentável.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-home"></i>
+                </div>
+                <h3>Multiuso</h3>
+                <p>Perfeito para cozinha, banheiro, vidros, móveis e qualquer superfície da sua casa.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h3>Macio e Seguro</h3>
+                <p>Textura suave que não danifica superfícies delicadas e é seguro para toda a família.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Product Section -->
+<section id="produto" class="product">
+    <div class="container">
+        <div class="product-container">
+            <div class="product-info">
+                <h2>Por que escolher os Panos Klint?</h2>
+                <p>Nossos panos multiuso representam a evolução da tecnologia têxtil aplicada à limpeza doméstica. Com fibras especiais e tratamento avançado, oferecemos uma experiência de limpeza superior.</p>
+                <div class="benefits">
+                    <div class="benefit">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Absorção superior - até 7x mais água que panos convencionais</span>
+                    </div>
+                    <div class="benefit">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Secagem rápida - evita odores e mofos</span>
+                    </div>
+                    <div class="benefit">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Antibacteriano - proteção natural contra bactérias</span>
+                    </div>
+                    <div class="benefit">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Sem pelos - não deixa resíduos nas superfícies</span>
+                    </div>
+                    <div class="benefit">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Lavagem na máquina - prático e econômico</span>
+                    </div>
+                </div>
+            </div>
+            <div class="product-image">
+                <img src="{{ url_for('static', filename='images/panos.jpg') }}" alt="Panos Multiuso Klint - Detalhes">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-content">
+            <h2>Transforme sua limpeza hoje mesmo!</h2>
+            <p>Junte-se a milhares de brasileiros que já descobriram o poder dos Panos Multiuso Klint. Limpeza eficiente, duradoura e sustentável.</p>
+            <div class="cta-buttons">
+                <a href="https://wa.me/47999809687?text=Olá! Gostaria de comprar os panos multiuso Klint por R$ 109,90" class="cta-button">
+                    <i class="fab fa-whatsapp"></i> Comprar Agora
+                </a>
+                <a href="https://www.instagram.com/klint_panos" class="secondary-button instagram-button" target="_blank" aria-label="Siga a Klint no Instagram">
+                    <i class="fab fa-instagram"></i> Siga-nos no Instagram
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

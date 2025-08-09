@@ -1,0 +1,271 @@
+{% extends "base.html" %}
+
+{% block title %}Contato - Klint | Fale Conosco{% endblock %}
+{% block description %}Entre em contato com a Klint. Estamos aqui para atender você e responder suas dúvidas sobre nossos produtos.{% endblock %}
+
+{% block content %}
+<!-- Contact Hero Section -->
+<section class="contact-hero">
+    <div class="container">
+        <div class="contact-hero-content">
+            <h1>Entre em Contato</h1>
+            <p>Estamos aqui para ajudar! Entre em contato conosco para tirar suas dúvidas, fazer pedidos ou dar sugestões.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Information -->
+<section class="contact-info-section">
+    <div class="container">
+        <div class="contact-grid">
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+                <h3>WhatsApp</h3>
+                <p>Central de Vendas</p>
+                <a href="https://wa.me/47999809687" class="contact-link">
+                    (47) 99980-9687
+                </a>
+                <p class="contact-time">Atendimento: Seg-Sex, 8h-18h</p>
+            </div>
+            
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fab fa-instagram"></i>
+                </div>
+                <h3>Instagram</h3>
+                <p>Siga-nos nas redes sociais</p>
+                <a href="https://www.instagram.com/klint_panos" class="contact-link" target="_blank">
+                    @klint_panos
+                </a>
+                <p class="contact-time">Atualizações diárias</p>
+            </div>
+            
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <h3>Email</h3>
+                <p>Envie sua mensagem</p>
+                <a href="mailto:contato@klint.com.br" class="contact-link">
+                    contato@klint.com.br
+                </a>
+                <p class="contact-time">Resposta em até 24h</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Form -->
+<section class="contact-form-section">
+    <div class="container">
+        <div class="form-container">
+            <h2>Envie sua Mensagem</h2>
+            <p>Preencha o formulário abaixo e entraremos em contato o mais breve possível.</p>
+            
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <label for="nome">Nome Completo *</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(47) 99999-9999">
+                </div>
+                
+                <div class="form-group">
+                    <label for="assunto">Assunto *</label>
+                    <select id="assunto" name="assunto" required>
+                        <option value="">Selecione um assunto</option>
+                        <option value="produto">Dúvida sobre Produtos</option>
+                        <option value="pedido">Fazer Pedido</option>
+                        <option value="sugestao">Sugestão</option>
+                        <option value="reclamacao">Reclamação</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="mensagem">Mensagem *</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" required placeholder="Descreva sua dúvida, pedido ou sugestão..."></textarea>
+                </div>
+                
+                <button type="submit" class="submit-button">
+                    <i class="fas fa-paper-plane"></i> Enviar Mensagem
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq-section">
+    <div class="container">
+        <h2>Perguntas Frequentes</h2>
+        <div class="faq-grid">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Como faço um pedido?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Para fazer um pedido, você pode entrar em contato conosco pelo WhatsApp (47) 99980-9687 ou preencher o formulário de contato acima. Nossa equipe entrará em contato para confirmar os detalhes do pedido.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Qual é o prazo de entrega?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>O prazo de entrega varia conforme sua localização. Em geral, as entregas são realizadas em 3-7 dias, somente frete grátis em Itajaí e região (consulte condições).</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Os panos têm garantia?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Sim! Oferecemos garantia de 30 dias para todos os nossos produtos. Se você não ficar satisfeito, pode solicitar a troca ou devolução dentro deste período.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Como lavar os panos Klint?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Os panos Klint podem ser lavados na máquina de roupas. Recomendamos usar água morna e sabão neutro. Evite usar amaciante, pois pode reduzir a absorção do pano.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Quantos panos vêm no pacote?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Cada pacote contém 600 panos multiuso Klint. São panos de 50cm x 30cm, ideais para limpeza doméstica.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Aceitam quais formas de pagamento?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Aceitamos PIX e dinheiro, consulte condições para compras no atacado.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Map Section -->
+<section class="map-section">
+    <div class="container">
+        <h2>Onde Estamos</h2>
+        <div class="map-container">
+            <div class="map-info">
+                <h3>Klint - Tecnologia no Tecido</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Brasil</p>
+                <p><i class="fas fa-phone"></i> (47) 99980-9687</p>
+                <p><i class="fas fa-envelope"></i> contato@klint.com.br</p>
+                <p><i class="fas fa-clock"></i> Seg-Sex: 8h-18h</p>
+            </div>
+            <div class="map-placeholder">
+                <i class="fas fa-map-marked-alt"></i>
+                <p>Atendimento em todo o Brasil</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // FAQ Accordion
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', function() {
+            const answer = this.nextElementSibling;
+            const icon = this.querySelector('i');
+            
+            // Toggle answer visibility
+            if (answer.style.maxHeight) {
+                answer.style.maxHeight = null;
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                answer.style.maxHeight = answer.scrollHeight + "px";
+                icon.style.transform = 'rotate(180deg)';
+            }
+        });
+    });
+
+    // Contact form validation
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Basic validation
+            const nome = document.getElementById('nome').value;
+            const email = document.getElementById('email').value;
+            const mensagem = document.getElementById('mensagem').value;
+            
+            if (!nome || !email || !mensagem) {
+                alert('Por favor, preencha todos os campos obrigatórios.');
+                return;
+            }
+            
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Por favor, insira um email válido.');
+                return;
+            }
+            
+            // Show loading state
+            const submitButton = this.querySelector('.submit-button');
+            const originalText = submitButton.innerHTML;
+            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+            submitButton.disabled = true;
+            
+            // Simulate form submission
+            setTimeout(() => {
+                alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+                this.reset();
+                submitButton.innerHTML = originalText;
+                submitButton.disabled = false;
+            }, 2000);
+        });
+    }
+
+    // Phone number formatting
+    const phoneInput = document.getElementById('telefone');
+    if (phoneInput) {
+        phoneInput.addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length <= 11) {
+                value = value.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
+                e.target.value = value;
+            }
+        });
+    }
+});
+</script>
+{% endblock %}
