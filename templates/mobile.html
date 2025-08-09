@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}Klint - Versão Mobile{% endblock %}
+{% block description %}Versão mobile otimizada para iPhone e Android dos Panos Multiuso Klint.{% endblock %}
+
+{% block content %}
+<section class="mobile-hero">
+  <div class="container">
+    <div class="mobile-hero-header">
+      <h1>Panos Klint</h1>
+      <p>Limpeza eficiente e duradoura com tecnologia no tecido.</p>
+    </div>
+
+    <div class="mobile-hero-media">
+      <img src="{{ url_for('static', filename='images/panos-klint.png') }}" alt="Panos Klint" class="mobile-product-image" />
+    </div>
+
+    <div class="price mobile-price">
+      <div class="price-original">de R$ 198,00</div>
+      <div class="price-current"><span class="currency">R$</span>109,90</div>
+      <div class="price-discount">44% de desconto no PIX</div>
+    </div>
+
+    <div class="mobile-cta">
+      <a href="https://wa.me/47999809687?text=Quero comprar os Panos Klint por R$ 109,90" class="cta-button large" aria-label="Comprar no WhatsApp">
+        <i class="fab fa-whatsapp"></i> Comprar no WhatsApp
+      </a>
+      <a href="https://www.instagram.com/klint_panos" target="_blank" class="secondary-button instagram-button" aria-label="Ver mais fotos no Instagram">
+        <i class="fab fa-instagram"></i> Ver Mais Fotos
+      </a>
+    </div>
+
+    <ul class="mobile-benefits">
+      <li><i class="fas fa-check-circle"></i> Absorve até 7x mais água</li>
+      <li><i class="fas fa-shield-virus"></i> Antibacteriano</li>
+      <li><i class="fas fa-wind"></i> Secagem rápida</li>
+      <li><i class="fas fa-tshirt"></i> Lave e reutilize centenas de vezes</li>
+    </ul>
+  </div>
+</section>
+{% endblock %}
+
+

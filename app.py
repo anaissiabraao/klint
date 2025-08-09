@@ -31,6 +31,11 @@ def contato():
     """Página de contato"""
     return render_template('contato.html')
 
+@app.route('/mobile')
+def mobile():
+    """Versão mobile otimizada (iPhone/Android)"""
+    return render_template('mobile.html')
+
 @app.route('/api/contato', methods=['POST'])
 def api_contato():
     """API para receber mensagens de contato"""
