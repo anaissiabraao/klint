@@ -35,7 +35,12 @@
                     <p>Tecnologia no Tecido</p>
                 </div>
             </div>
-            <div class="nav-links">
+            <button class="mobile-menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="primary-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links" id="primary-nav">
                 <a href="{{ url_for('index') }}">Home</a>
                 <a href="{{ url_for('produto') }}">Produto</a>
                 <a href="{{ url_for('sobre') }}">Sobre</a>

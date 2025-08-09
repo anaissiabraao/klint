@@ -113,6 +113,30 @@ body {
     width: 100%;
 }
 
+/* Botão menu mobile (hambúrguer) */
+.mobile-menu-toggle {
+    display: none;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: transparent;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+}
+.mobile-menu-toggle span {
+    display: block;
+    width: 24px;
+    height: 3px;
+    background: var(--text-color);
+    border-radius: 2px;
+    transition: transform .3s ease, opacity .3s ease;
+}
+.mobile-menu-toggle.active span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.mobile-menu-toggle.active span:nth-child(2) { opacity: 0; }
+.mobile-menu-toggle.active span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
 .cta-button {
     background: linear-gradient(135deg, var(--accent-color), #128c7e);
     color: var(--white);
@@ -1395,6 +1419,9 @@ select#assunto:focus {
     .nav-links {
         display: none;
     }
+
+    .mobile-menu-toggle { display: inline-flex; margin-left: auto; }
+    .nav-links.active { display: flex; flex-direction: column; gap: 1rem; padding: .5rem 0; }
 
     .hero {
         grid-template-columns: 1fr;

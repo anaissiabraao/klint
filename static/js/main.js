@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-    // Header auto-hide behavior
+    // Header auto-hide behavior (desativado em telas pequenas)
     let headerTimeout;
     const header = document.querySelector('.header');
     
@@ -70,20 +70,23 @@ document.addEventListener('DOMContentLoaded', function() {
         header.style.transition = 'transform 0.3s ease';
     }
     
-    // Esconder header após 3 segundos de inatividade
+    // Esconder header após 3 segundos de inatividade (apenas desktop)
     function startHeaderTimer() {
+        if (window.innerWidth <= 768) return; // não esconder em mobile
         clearTimeout(headerTimeout);
         headerTimeout = setTimeout(hideHeader, 3000);
     }
     
     // Mostrar header quando mouse passar por cima
-    header.addEventListener('mouseenter', () => {
-        clearTimeout(headerTimeout);
-        showHeader();
-    });
+    if (header) {
+        header.addEventListener('mouseenter', () => {
+            clearTimeout(headerTimeout);
+            showHeader();
+        });
     
     // Iniciar timer quando mouse sair do header
-    header.addEventListener('mouseleave', startHeaderTimer);
+        header.addEventListener('mouseleave', startHeaderTimer);
+    }
     
     // Mostrar header quando scrollar para cima
     let lastScrollY = window.scrollY;
@@ -91,13 +94,13 @@ document.addEventListener('DOMContentLoaded', function() {
         const currentScrollY = window.scrollY;
         
         // Mostrar header quando scrollar para cima
-        if (currentScrollY < lastScrollY && currentScrollY > 100) {
+        if (currentScrollY < lastScrollY && currentScrollY > 100 && window.innerWidth > 768) {
             showHeader();
             startHeaderTimer();
         }
         
         // Esconder header quando scrollar para baixo
-        if (currentScrollY > lastScrollY && currentScrollY > 200) {
+        if (currentScrollY > lastScrollY && currentScrollY > 200 && window.innerWidth > 768) {
             hideHeader();
         }
         
